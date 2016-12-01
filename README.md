@@ -5,7 +5,7 @@
 1. cd to `fed-test` root folder
 2. Run `npm install && bower install && gem install sass`
    Note: use `sudo` for root/admin as needed
-3. Run 'grunt serve' to create the http server
+3. Run `grunt serve` to create the http server
 
 ## Further Notes
 
