@@ -1,0 +1,30 @@
+@import "variables.scss";
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: $black;
+  shape-rendering: crispEdge;
+}
+
+.y {
+	display: none;
+}
+
+.area {
+    fill: #edf9ff;
+    stroke-width: 2;
+}
+
+.axis text {
+  font-family: $roboto;
+  font-size: 10px;
+}
+
+.tick {
+  stroke-dasharray: 1, 2;
+}
+
+.area {
+	fill: blue;
+}

@@ -1,0 +1,33 @@
+@import "variables.scss";
+
+.chart {
+  margin-left: 13rem;
+  margin-right: 2rem;
+}
+
+.chart div {
+  width: 0;
+  transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.chart div {
+  height: 25px;
+  margin: 3px 0;
+  &:first-child {
+    background: $google-blue;
+  }
+  &:nth-of-type(2) {
+    background: #33beff;
+  }
+  &:nth-of-type(3) {
+    background: #66ceff;
+  }
+  &:nth-of-type(4) {
+    background: #99dfff;
+  }
+  &:nth-of-type(5) {
+    background: #ccefff;
+  }
+}

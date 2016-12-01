@@ -1,1 +1,83 @@
-
+<div class="container" ng-controller="MainCtrl">
+  <div class="row">
+    <div class="col-md-4">
+      <aside>
+        <div class="aside-container">
+          <div class="aside-content">
+            <h1 class="main">{{companydata.profile.company}}</h1>
+            <h2 class="sub">{{companydata.profile.companyInfo}}</h2>
+            <div class="social-container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <p class="social-link">Add to Watch List</p>
+                </div>
+                <div class="col-sm-6">
+                  <p class="social-link">Share profile</p>
+                </div>
+              </div>
+            </div>
+            <div class="analytics-overview">
+              <div class="row">
+              <div class="indv-analytic">
+                <div class="col-sm-3">
+                  <h3 class="value">{{companydata.profile.visits}}</h3>
+                  <h4 class="title">Visits</h4>
+                </div>
+              </div>
+              <div class="indv-analytic">
+                <div class="col-sm-3">
+                  <h3 class="value">{{companydata.profile.physicians}}</h3>
+                  <h4 class="title">Physicians</h4>
+                </div>
+              </div>
+              <div class="indv-analytic">
+                <div class="col-sm-3">
+                  <h3 class="value">{{companydata.profile.complaints}}</h3>
+                  <h4 class="title">Complaints</h4>
+                </div>
+              </div>
+              <div class="indv-analytic">
+                <div class="col-sm-3">
+                  <h3 class="value">{{companydata.profile.diagnosis}}</h3>
+                  <h4 class="title">Diagnosis</h4>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="google-maps-embed">
+            <iframe 
+              class="map" 
+              frameborder="0" 
+              ng-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA4Ej0rDX7vpIb_A4u1cONgYbOhFX9HsYE&q=Dublin+OH" allowfullscreen></iframe>
+          </div>
+          <div class="social-container bottom">
+            <div class="row">
+              <div class="col-sm-6">
+                <p class="social-link">Go to Map</p>
+              </div>
+              <div class="col-sm-6">
+                <p class="social-link">Go to Constellation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="col-md-8">
+      <div class="year-dropdown">2015<div class="glyphicon glyphicon-triangle-bottom"></div></div>
+      <div class="graphs-container">
+        <h5 class="graph-title">Visits</h5>
+        <div class="line-graph" ng-controller="CardiacVisitsCtrl">
+          <div line-graph chart-data="visitsData"></div>
+        </div>
+      </div>
+      <div class="graphs-container">
+        <h5 class="graph-title">Insurance<div class="info glyphicon glyphicon-info-sign"></div></h5>
+        <div class="bar-graph" ng-controller="CardiacInsuranceCtrl">
+          <div bar-graph chart-data="insuranceData"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

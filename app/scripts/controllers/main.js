@@ -7,11 +7,13 @@
  * # MainCtrl
  * Controller of the crosschxCodeTestApp
  */
+
+ /* NOTE:
+    
+ */
 angular.module('crosschxCodeTestApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, $http) {
+    $http.get('companydata.json').success(function(data) {
+	   $scope.companydata = data;
+	});
   });
