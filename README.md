@@ -1,12 +1,13 @@
 # crosschx-code-test
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
-
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+1. cd to `fed-test` root folder
+2. Run `npm install && bower install && gem install sass`
+   Note: use `sudo` for root/admin as needed
+3. Run 'grunt serve' to create the http server
 
-## Testing
+## Further Notes
 
-Running `grunt test` will run the unit tests with karma.
+Make sure you have the export path to Ruby set in your `.bash_profile` or .zhsrc`
+If you don't have Ruby, and on OS X, install using Homebrew: `brew install ruby`
