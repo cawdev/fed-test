@@ -1,17 +1,14 @@
 @import "variables.scss";
 
 .chart {
-  margin-left: 13rem;
-  margin-right: 2rem;
+  margin: 0 5rem 1rem 13rem;
 }
-
 .chart div {
   width: 0;
   transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
   -webkit-transition: all 1s ease-out;
 }
-
 .chart div {
   height: 25px;
   margin: 3px 0;

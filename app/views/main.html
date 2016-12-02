@@ -9,7 +9,7 @@
             <div class="social-container">
               <div class="row">
                 <div class="col-sm-6">
-                  <p class="social-link">Add to Watch List</p>
+                  <p class="social-link">Add to Watch List<span class="glyphicon glyphicon-triangle-bottom"></span></p>
                 </div>
                 <div class="col-sm-6">
                   <p class="social-link">Share profile</p>
@@ -54,10 +54,10 @@
           <div class="social-container bottom">
             <div class="row">
               <div class="col-sm-6">
-                <p class="social-link">Go to Map</p>
+                <p class="social-link"><span class="glyphicon glyphicon-map-marker"></span> Go to Map</p>
               </div>
               <div class="col-sm-6">
-                <p class="social-link">Go to Constellation</p>
+                <p class="social-link"><span class="glyphicon glyphicon-globe"></span> Go to Constellation</p>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
       </aside>
     </div>
     <div class="col-md-8">
-      <div class="year-dropdown">2015<div class="glyphicon glyphicon-triangle-bottom"></div></div>
+      <div class="year-dropdown">2015<span class="glyphicon glyphicon-triangle-bottom"></span></div>
       <div class="graphs-container">
         <h5 class="graph-title">Visits</h5>
         <div class="line-graph" ng-controller="CardiacVisitsCtrl">
@@ -73,7 +73,14 @@
         </div>
       </div>
       <div class="graphs-container">
-        <h5 class="graph-title">Insurance<div class="info glyphicon glyphicon-info-sign"></div></h5>
+        <h5 class="graph-title">Insurance<span class="info glyphicon glyphicon-info-sign"></span></h5>
+        <div class="insurance-title-container">
+          <h6 class="insurance-title">Insurance</h6>
+          <h6 class="insurance-title">Insurance</h6>
+          <h6 class="insurance-title">Insurance</h6>
+          <h6 class="insurance-title">Insurance</h6>
+          <h6 class="insurance-title">Insurance</h6>
+        </div>
         <div class="bar-graph" ng-controller="CardiacInsuranceCtrl">
           <div bar-graph chart-data="insuranceData"></div>
         </div>

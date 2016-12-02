@@ -9,5 +9,5 @@
  */
 angular.module('crosschxCodeTestApp')
   .controller('CardiacInsuranceCtrl', function ($scope) {
-  	$scope.insuranceData = [100, 85, 80, 20, 18, ['Insurance']];
+  	$scope.insuranceData = [100, 85, 80, 20, 18];
   });

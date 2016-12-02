@@ -8,7 +8,7 @@
  */
 angular.module('crosschxCodeTestApp')
   .directive('barGraph', function ($window) {
-    var directiveDefinitionObject = {
+    var barGraphObject = {
          restrict: 'A',
          replace: false,
          scope: {data: '=chartData'},
@@ -19,9 +19,8 @@ angular.module('crosschxCodeTestApp')
              .selectAll('div')
              .data(scope.data).enter().append('div')
              .transition().ease('elastic')
-             .style('width', function(d) { return d + '%'; })
-             .text(function(d) { return d[0][1]; });
+             .style('width', function(d) { return d + '%'; });
          } 
       };
-      return directiveDefinitionObject;
+      return barGraphObject;
   });

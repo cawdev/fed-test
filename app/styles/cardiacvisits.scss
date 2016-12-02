@@ -2,29 +2,29 @@
 
 .axis path,
 .axis line {
+  margin-top: 1rem;
   fill: none;
   stroke: $black;
   shape-rendering: crispEdge;
 }
-
+.x {
+  stroke-width: 0;
+}
 .y {
 	display: none;
 }
-
-.area {
-    fill: #edf9ff;
-    stroke-width: 2;
-}
-
 .axis text {
   font-family: $roboto;
   font-size: 10px;
 }
-
 .tick {
   stroke-dasharray: 1, 2;
 }
-
+.path.path {
+  transform: translate(0,40px);
+}
 .area {
-	fill: blue;
+    fill: #edf9ff;
+    stroke-width: 0;
+    transform: translate(0,40px);
 }

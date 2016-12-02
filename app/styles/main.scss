@@ -32,11 +32,12 @@ body {
 
   .search-input-container {
     .search-input {
-      background: #00aeff;
+      background: url(/images/magnifying-glass-icon.png) no-repeat 335px 1px;
       border: none;
+      padding-bottom: .5rem;
       border-bottom: 1px solid #82daff;
       margin: 2rem 0 0 1.5rem;
-      min-width: 340px;
+      min-width: 360px;
       &::-webkit-input-placeholder {
           color: #82daff;
           font-size: 1.8rem;
@@ -50,7 +51,7 @@ body {
       margin-right: 2rem;
     }
     .more-menu,
-    .info {
+    .cog {
       float: right;
       &.glyphicon {
         color: $white;
@@ -68,7 +69,7 @@ body {
       padding-left: 0;
       .nav-link {
         display: inline-block;
-        margin: 0 .95rem;
+        margin: 0 .85rem;
         &.active {
           a {
             color: $white;
@@ -104,11 +105,12 @@ body {
 }
 .back-btn {
   position: absolute;
-  margin-left: 3rem;
+  margin-left: 1rem;
   a.back-link {
     font-family: $roboto;
     color: $light-grey;
     .glyphicon {
+      font-size: 1rem;
       padding-right: 1rem;
     }
   }
@@ -117,8 +119,7 @@ body {
   background: $white;
   box-shadow: 0px 0px 7px $light-grey;
   position: relative;
-  width: 340px;
-  height: 676px;
+  min-height: 743px;
   top: -15rem;
   bottom: 0;
   right: 0;
@@ -126,7 +127,7 @@ body {
     padding: 2.5rem;
     h1.main {
       color: $bold-grey;
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 300;
       margin: 0;
       padding: 0;
@@ -162,6 +163,10 @@ body {
       color: $google-blue;
       font-size: 1rem;
       transition: .2s;
+      .glyphicon {
+        padding-left: .5rem;
+        font-size: .8rem;
+      }
       &:hover {
         color: $google-light-blue;
         transition: .2s;
@@ -173,7 +178,7 @@ body {
     .map {
       border: 0;
       height: 150px;
-      width: 340px;
+      width: 360px;
     }
   }
 }
@@ -189,19 +194,28 @@ body {
 }
 .graphs-container {
     margin-bottom: 3rem;
-    padding: 1rem;
+    padding: 1rem 0 3rem 0;
     box-shadow: 0px 0px 7px $light-grey;
     clear: both;
     .graph-title {
       font-size: 1.8rem;
       font-weight: 200;
-      margin-left: 1.5rem;
+      margin: 1rem 0 2rem 1.5rem;
       .glyphicon {
         color: $light-grey;
         float: right;
         font-size: 1.4rem;
         margin-right: 2rem;
         cursor: pointer;
+      }
+    }
+    .insurance-title-container {
+      float: left;
+      margin-left: 1.75rem;
+      .insurance-title {
+        color: $google-blue;
+        margin: 0;
+        padding: .74rem 0;
       }
     }
     .line-graph {

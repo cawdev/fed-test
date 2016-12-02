@@ -13,12 +13,12 @@ angular.module('crosschxCodeTestApp')
       template:'<svg width="650" height="200"></svg>',
        link: function(scope, elem, attrs) {
            	var visitsDataToPlot = scope[attrs.chartData],
-				padding = 20,
-				pathClass = 'path',
-				xScale, yScale, xAxisGen, yAxisGen, lineFun,
-				d3 = $window.d3,
-				rawSvg = elem.find('svg'),
-				svg = d3.select(rawSvg[0]);
+				        padding = 20,
+			          pathClass = 'path',
+			          xScale, yScale, xAxisGen, yAxisGen, graphLine, area,
+				        d3 = $window.d3,
+				        rawSvg = elem.find('svg'),
+				        svg = d3.select(rawSvg[0]);
 
            	function setChartParameters() {
 
@@ -46,37 +46,50 @@ angular.module('crosschxCodeTestApp')
                    	.orient('left')
                    	.ticks(5);
 
-               	lineFun = d3.svg.line()
+                area = d3.svg.area()
+                    .x(function (d) {
+                      return xScale(d.monthByNum);
+                    })
+                    .y0(175)
+                    .y1(function (d) {
+                      return yScale(d.visits);
+                    });
+
+               	graphLine = d3.svg.line()
                    	.x(function (d) {
-                       return xScale(d.monthByNum);
+                      return xScale(d.monthByNum);
                    	})
                    	.y(function (d) {
-                       return yScale(d.visits);
-                   	})
-                   	.interpolate('basis');
+                      return yScale(d.visits);
+                   	});
            	}
          
-	        function drawLineChart() {
+	          function drawLineChart() {
 
-               setChartParameters();
+                setChartParameters();
 
-               svg.append('svg:g')
+                svg.append('svg:g')
                    	.attr('class', 'x axis')
-                   	.attr('transform', 'translate(0,180)')
+                   	.attr('transform', 'translate(0,0)')
                    	.call(xAxisGen);
 
-               svg.append('svg:g')
+                svg.append('svg:g')
                    	.attr('class', 'y axis')
                    	.attr('transform', 'translate(20,0)')
                    	.call(yAxisGen);
 
-               svg.append('svg:path')
+                svg.append('path')
+                    .datum(visitsDataToPlot)
+                    .attr('class', 'area')
+                    .attr('d', area);
+
+                svg.append('svg:path')
                    	.attr({
-                       d: lineFun(visitsDataToPlot),
-                       'stroke': '#00aeff',
-                       'stroke-width': 2,
-                       'fill': '#edf9ff',
-                       'class': pathClass
+                      d: graphLine(visitsDataToPlot),
+                      'stroke': '#00aeff',
+                      'stroke-width': 2,
+                      'fill': 'none',
+                      'class': pathClass
                    	});
 	           }
 
